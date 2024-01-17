@@ -1,0 +1,32 @@
+@import '../currenciesTable.module.scss';
+@import '../../../utils/variables.scss';
+
+th {
+    @include th_td_styles;
+    font-size: 18px;
+
+    p {
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 5%;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .exclamationCircle {  
+        vertical-align: middle;
+    }
+}
+
+.darkThead {
+    thead tr:hover {
+        background-color: $dark-color1;
+    }
+}
+
+.lightThead {
+    thead tr:hover {
+        background-color: white;
+    }
+}

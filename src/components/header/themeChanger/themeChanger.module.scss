@@ -1,0 +1,13 @@
+@import './../../../utils/variables.scss';
+
+.themeChanger {
+    display: block;
+    flex: 0.1;
+}
+
+.themeChanger {
+    cursor: pointer;
+    font-size: 22px;
+    width: max-content;
+    font-weight: bold;
+}

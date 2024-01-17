@@ -1,0 +1,135 @@
+@import '../../utils/variables.scss';
+@import './headerMedia.module.scss';
+
+@mixin headerContainer {
+    width: 100vw;
+    margin: 0;
+    padding: 0.5%;
+    position: fixed;
+    top: 0;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: 50fr 3fr 1fr 5fr 1fr;
+
+    .headerName {
+        display: inline-block;
+        text-decoration: none;
+        margin-left: 2%;
+    }
+
+    .headerName,
+    .themeChanger,
+    .updateBtn,
+    .menuOpener {
+        cursor: pointer;
+        font-size: 22px;
+        width: max-content;
+        font-weight: bold;
+    }
+
+    .updateBtn {
+        border-radius: 0.66em;
+        padding: 5px 15px;
+        border: none;
+    }
+    .menuOpener {
+        display: contents;
+    }
+}
+
+.lightHeaderContainer {
+    @include headerContainer;
+    background-color: white;
+
+    .headerName {
+        color: green;
+    }
+}
+
+.darkHeaderContainer {
+    @include headerContainer;
+    background-color: $dark-color1;
+    border-bottom: 1px solid gray;
+
+    .headerName {
+        color: $link-color;
+    }
+
+    &::after {
+        position: absolute;
+        width: 100%;
+        height: calc(6% + 22px);
+        background-color: $dark-color1;
+    }
+
+    .updateBtn {
+        background-color: transparent;
+        color: $link-color;
+    }
+
+    .updateBtn:hover {
+        background-color: #1e1f24;
+
+        option {
+            background-color: $dark-color1;
+        }
+    }
+}
+
+.marginCleaner {
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+}
+
+
+
+@include largeDesktop() {
+    header {
+        .menuOpener {
+            visibility: hidden;
+        }
+    }
+}
+
+@include desktop {
+    header {
+        .menuOpener {
+            visibility: hidden;
+        }
+    }
+}
+
+@include laptop {
+    header {
+        .menuOpener {
+            visibility: hidden;
+        }
+    }
+}
+
+@include tablet {
+    header {
+        .menuOpener {
+            visibility: hidden;
+        }
+    }
+}
+
+@include mobile {
+    header {
+        
+        &>:not(.menuOpener) {
+            display: none;
+        }
+       .menuOpener {
+        width: 100%;
+        visibility: visible;
+        
+       }
+    }
+    .lightHeaderContainer, .darkHeaderContainer {
+        background-color: transparent;
+        position: relative;display: flex;justify-content: space-between;
+        border: none;
+    }
+}

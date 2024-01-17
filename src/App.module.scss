@@ -1,0 +1,16 @@
+@import './utils/variables.scss';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.lightMain {
+    background-color: $bg-gray-color;
+}
+
+.darkMain {
+    background-color: $dark-color1;
+}

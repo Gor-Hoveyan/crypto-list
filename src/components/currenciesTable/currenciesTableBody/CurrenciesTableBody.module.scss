@@ -1,0 +1,50 @@
+@import '../currenciesTable.module.scss';
+@import '../../../utils/variables.scss';
+
+@mixin td-components-style {
+    td {
+        @include th_td_styles;
+    }
+
+    .coinPNG {
+        width: 30px;
+        height: 30px;
+        margin-right: 3%;
+    }
+
+    .coinNameDiv {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .changePercentPositive {
+        color: green;
+    }
+
+    .changePercentNegative {
+        color: red;
+    }
+}
+
+.darkTbody {
+    @include td-components-style;
+    td {
+        border-top: 1px solid lightgray;
+    }
+
+    tr:hover {
+        background-color: $dark-color2;
+    }
+}
+
+.lightTbody {
+    @include td-components-style;
+    td {
+        border-top: 1px solid lightgray;
+    }
+
+    tr:hover {
+        background-color: lightgreen;
+    }
+}

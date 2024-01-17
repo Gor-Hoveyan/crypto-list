@@ -1,0 +1,63 @@
+@import '../../../utils/variables.scss';
+
+@mixin burgerMenu {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    cursor:default;
+}
+
+@mixin menuList {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    flex-direction: column;
+    align-items: left;
+    padding-top: 5%;
+    
+    li {
+        margin-bottom: 8%;
+        text-align: center;
+    }
+
+    .listThemeChanger {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .burgerMenuOpener {
+        width: 100%;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: max-content;
+        cursor: pointer;
+    }
+}
+
+.burgerMenuNav {
+    @include burgerMenu;
+    transform: translateX(0);
+    transition: transform 1s ease;
+    background-color: white;
+}
+
+.hiddenBurgerMenuNav {
+    @include burgerMenu;
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+    background-color: white;
+}
+
+.darkMenuList {
+    @include menuList;
+    background-color: $dark-color1;
+}
+
+.lightMenuList {
+    @include menuList;
+    background-color: white;
+}

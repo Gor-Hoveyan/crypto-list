@@ -1,0 +1,27 @@
+@import '../../utils/variables.scss';
+
+@mixin th_td_styles {
+    border-bottom: 1px solid lightgray;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+@mixin table {
+    margin: 0 auto 2% auto;
+    width: 90vw;
+    border-collapse: collapse;
+    text-align: left;
+    border-top-left-radius: 0.8%;
+    border-top-right-radius: 0.8%;
+}
+
+.lightTable {
+    @include table;
+    background-color: white;
+}
+
+.darkTable {
+    @include table;
+    background-color: $dark-color1;
+    color: white;
+}

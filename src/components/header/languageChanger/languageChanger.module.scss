@@ -1,0 +1,40 @@
+@import '../../../utils/variables.scss';
+
+
+@mixin languageChanger {
+    cursor: pointer;
+    font-size: 22px;
+    width: max-content;
+    font-weight: bold;
+    border-radius: 0.66em;
+    padding: 5px 15px;
+    border: none;
+    font-size: px;
+    user-select: none;
+    option {
+        font-size: 22px;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.darkLanguageChanger {
+    @include languageChanger;
+    background-color: $dark-color1;
+    color: $link-color;
+    &:hover {
+        background-color: #1e1f24;
+        option {
+            background-color: $dark-color1;
+        }
+    }
+}
+
+.lightLanguageChanger {
+    @include languageChanger;
+    background-color: $bg-gray-color;
+}
