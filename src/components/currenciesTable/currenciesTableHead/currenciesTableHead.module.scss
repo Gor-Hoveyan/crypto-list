@@ -1,5 +1,6 @@
 @import '../currenciesTable.module.scss';
 @import '../../../utils/variables.scss';
+@import '../../../utils/mediaBreakpoints.scss';
 
 th {
     @include th_td_styles;
@@ -19,14 +20,61 @@ th {
     }
 }
 
-.darkThead {
-    thead tr:hover {
-        background-color: $dark-color1;
+
+
+
+@include desktop {
+    .lightThead {
+        thead tr:hover {
+            background-color: white;
+        }
+    }
+    .darkThead {
+        thead tr:hover {
+            background-color: $dark-color1;
+        }
     }
 }
 
-.lightThead {
-    thead tr:hover {
-        background-color: white;
+@include largeDesktop {
+    .lightThead {
+        thead tr:hover {
+            background-color: white;
+        }
+    }
+    .darkThead {
+        thead tr:hover {
+            background-color: $dark-color1;
+        }
+    }
+}
+
+@include mobile {
+    thead {
+        tr {
+            th {
+                font-size: 16px;
+                text-wrap: nowrap;
+                &:nth-child(1),
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(7) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    thead {
+        tr {
+            th {
+                &:nth-child(6) {
+                    display: none;
+                }
+            }
+        }
     }
 }

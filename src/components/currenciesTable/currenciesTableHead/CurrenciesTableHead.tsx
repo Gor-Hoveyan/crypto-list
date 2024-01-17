@@ -5,8 +5,6 @@ import { Tooltip } from "react-tooltip";
 import { avgTooltipContentEn, avgTooltipContentRu, changeTooltipContentEn, changeTooltipContentRu, circSupTooltipContentEn, markCapTooltipContentEn, markCapTooltipContentRu, nameTooltipContentEn, nameTooltipContentRu, priceTooltipContentEn, priceTooltipContentRu, rankTooltipContentEn, rankTooltipContentRu, volumeTooltipContentEn, volumeTooltipContentRu } from "../../../utils/tooltipContents";
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks";
 import { sortTable } from "../../../redux/reducers/currenciesSlice";
-import './curremciesTableHeadMedia.module.scss';
-
 
 function CurrenciesTableHead() {
     const isDarkMode: boolean = useAppSelector(state => state.currenciesSlice.isDarkMode);

@@ -3,7 +3,6 @@ import style from './CurrenciesTableBody.module.scss';
 import { slicePrice, numberWithCommas, slicePercent } from "../../../utils/functions";
 import { CoinData } from "../../../utils/schema";
 import { useAppSelector } from "../../../redux/hooks";
-import './CurrenciesTableBodyMedia.module.scss';
 
 function CurrenciesTableBody() {
     const isDataLoading: boolean = useAppSelector(state => state.currenciesSlice.isDataLoading);

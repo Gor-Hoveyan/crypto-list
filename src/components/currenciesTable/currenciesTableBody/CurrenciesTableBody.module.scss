@@ -1,5 +1,6 @@
 @import '../currenciesTable.module.scss';
 @import '../../../utils/variables.scss';
+@import './../../../utils/mediaBreakpoints.scss';
 
 @mixin td-components-style {
     td {
@@ -32,10 +33,6 @@
     td {
         border-top: 1px solid lightgray;
     }
-
-    tr:hover {
-        background-color: $dark-color2;
-    }
 }
 
 .lightTbody {
@@ -43,8 +40,55 @@
     td {
         border-top: 1px solid lightgray;
     }
+}
 
-    tr:hover {
-        background-color: lightgreen;
+
+
+@include largeDesktop {
+    .lightTbody {
+        tr:hover {
+            background-color: lightgreen;
+        }
+    }
+    .darkTbody {
+        tr:hover {
+            background-color: $dark-color2;
+        }
+    }
+}
+
+
+@include desktop {
+    .lightTbody {
+        tr:hover {
+            background-color: lightgreen;
+        }
+    }
+    .darkTbody {
+        tr:hover {
+            background-color: $dark-color2;
+        }
+    }
+}
+
+@include mobile {
+    tbody {
+        tr {
+            td {
+                &:nth-child(1),&:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
+                display: none;
+            }}
+        }
+    }
+}
+
+@include tablet {
+    tbody {
+        tr {
+            td {
+            &:nth-child(6) {
+                display: none;
+            }}
+        }
     }
 }

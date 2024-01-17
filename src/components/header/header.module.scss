@@ -1,5 +1,5 @@
 @import '../../utils/variables.scss';
-@import './headerMedia.module.scss';
+@import '../../utils/mediaBreakpoints.scss';
 
 @mixin headerContainer {
     width: 100vw;
@@ -67,13 +67,7 @@
         color: $link-color;
     }
 
-    .updateBtn:hover {
-        background-color: #1e1f24;
 
-        option {
-            background-color: $dark-color1;
-        }
-    }
 }
 
 .marginCleaner {
@@ -89,12 +83,30 @@
             visibility: hidden;
         }
     }
+    .darkHeaderContainer {
+        .updateBtn:hover {
+            background-color: #1e1f24;
+    
+            option {
+                background-color: $dark-color1;
+            }
+        }
+    }
 }
 
 @include desktop {
     header {
         .menuOpener {
             visibility: hidden;
+        }
+        .darkHeaderContainer {
+            .updateBtn:hover {
+                background-color: #1e1f24;
+        
+                option {
+                    background-color: $dark-color1;
+                }
+            }
         }
     }
 }

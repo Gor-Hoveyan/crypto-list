@@ -1,6 +1,5 @@
 import React from "react";
 import style from './header.module.scss';
-
 import { useAppSelector, useAppDispatch } from "../../redux/hooks";
 import LanguageChanger from "./languageChanger/LanguageChanger";
 import { updateData } from "../currenciesTable/CurrenciesTable";

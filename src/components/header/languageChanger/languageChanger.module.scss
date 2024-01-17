@@ -1,5 +1,5 @@
 @import '../../../utils/variables.scss';
-
+@import '../../../utils/mediaBreakpoints.scss';
 
 @mixin languageChanger {
     cursor: pointer;
@@ -16,25 +16,31 @@
         font-weight: bold;
         padding: 10px;
     }
-
-    &:focus {
-        outline: none;
-    }
 }
 
 .darkLanguageChanger {
     @include languageChanger;
     background-color: $dark-color1;
     color: $link-color;
-    &:hover {
-        background-color: #1e1f24;
-        option {
-            background-color: $dark-color1;
-        }
-    }
 }
 
 .lightLanguageChanger {
     @include languageChanger;
     background-color: $bg-gray-color;
+}
+
+@include largeDesktop {
+    .darkLanguageChanger {
+        &:hover {
+            background-color: #1e1f24;
+            option {
+                background-color: $dark-color1;
+            }
+        }
+    }
+    .darkLanguageChanger, .lightLanguageChanger {
+        &:focus {
+            outline: none;
+        }
+    }
 }
