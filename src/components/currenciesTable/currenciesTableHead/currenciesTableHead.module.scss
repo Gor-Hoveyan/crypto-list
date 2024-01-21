@@ -4,7 +4,7 @@
 
 th {
     @include th_td_styles;
-    font-size: 18px;
+    font-size: $defaultFont-size;
 
     p {
         display: inline-block;
@@ -53,7 +53,6 @@ th {
     thead {
         tr {
             th {
-                font-size: 16px;
                 text-wrap: nowrap;
                 &:nth-child(1),
                 &:nth-child(4),

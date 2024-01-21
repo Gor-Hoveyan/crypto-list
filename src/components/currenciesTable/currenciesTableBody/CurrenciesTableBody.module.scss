@@ -5,6 +5,7 @@
 @mixin td-components-style {
     td {
         @include th_td_styles;
+        font-size: 1rem;
     }
 
     .coinPNG {

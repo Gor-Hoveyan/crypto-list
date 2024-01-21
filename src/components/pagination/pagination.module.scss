@@ -16,7 +16,7 @@
         border-radius: 5px;
         width: 75px;
         height: 40px;
-        font-size: 18px;
+        font-size: $defaultFont-size;
         &:hover {
             cursor: pointer;
         }
@@ -24,7 +24,7 @@
     .pageNumber {
         padding: 0px 2px;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 1rem;
         &:hover {
             font-weight: bold;
         }
