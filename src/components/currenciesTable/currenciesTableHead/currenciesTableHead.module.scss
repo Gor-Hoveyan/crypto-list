@@ -49,6 +49,19 @@ th {
     }
 }
 
+
+@include tablet {
+    thead {
+        tr {
+            th {
+                &:nth-child(6) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 @include mobile {
     thead {
         tr {
@@ -63,17 +76,8 @@ th {
                 }
             }
         }
-    }
-}
-
-@include tablet {
-    thead {
-        tr {
-            th {
-                &:nth-child(6) {
-                    display: none;
-                }
-            }
+        .exclamationCircle {
+            display: none;
         }
     }
 }

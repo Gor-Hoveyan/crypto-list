@@ -2,7 +2,7 @@
 @import '../../utils/mediaBreakpoints.scss';
 
 @mixin headerContainer {
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 0.5%;
     position: fixed;
@@ -129,19 +129,22 @@
 
 @include mobile {
     header {
-        
+        position: fixed;
         &>:not(.menuOpener) {
             display: none;
         }
        .menuOpener {
         width: 100%;
         visibility: visible;
-        
+        position: fixed;
        }
     }
     .lightHeaderContainer, .darkHeaderContainer {
+        width: 100%;
         background-color: transparent;
-        position: relative;display: flex;justify-content: space-between;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
         border: none;
     }
 }
