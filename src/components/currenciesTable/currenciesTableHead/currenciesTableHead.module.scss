@@ -5,7 +5,7 @@
 th {
     @include th_td_styles;
     font-size: $defaultFont-size;
-
+    text-wrap: nowrap;
     p {
         display: inline-block;
         cursor: pointer;
@@ -59,6 +59,9 @@ th {
                 }
             }
         }
+        .exclamationCircle {
+            display: none;
+        }
     }
 }
 
@@ -67,11 +70,11 @@ th {
         tr {
             th {
                 text-wrap: nowrap;
-                &:nth-child(1),
                 &:nth-child(4),
                 &:nth-child(5),
                 &:nth-child(6),
-                &:nth-child(7) {
+                &:nth-child(7),
+                &:nth-child(8) {
                     display: none;
                 }
             }
