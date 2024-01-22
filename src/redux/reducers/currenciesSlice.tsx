@@ -25,6 +25,7 @@ type InitialState = {
     isDarkMode: boolean,
     language: string,
     isMenuOpened: boolean,
+    currentCoinData: CoinData | undefined
 }
 
 const initialState: InitialState = {
@@ -37,6 +38,7 @@ const initialState: InitialState = {
     isDarkMode: false,
     language: 'en',
     isMenuOpened: false,
+    currentCoinData: undefined
 }
 
 const currenciesSlice = createSlice({
@@ -124,9 +126,29 @@ const currenciesSlice = createSlice({
         },
         setIsMenuOpened: (state) => {
             state.isMenuOpened = !state.isMenuOpened;
+        },
+        setCurrentCoinData: (state, action: PayloadAction<string | undefined>) => {
+            if (action.payload) {
+                state.data.map(coin => {
+                    if (coin.name === action.payload) {
+                        state.currentCoinData = coin;
+                    }
+                })
+            }
+
         }
     }
 })
 
 export default currenciesSlice.reducer;
-export const { setIsDataLoading, setData, setPaginationNumbers, setOffset, sortTable, setIsDarkMode, setCurrentPage, changeLanguage, setIsMenuOpened } = currenciesSlice.actions;
+export const { setIsDataLoading,
+    setData,
+    setPaginationNumbers,
+    setOffset,
+    sortTable,
+    setIsDarkMode,
+    setCurrentPage,
+    changeLanguage,
+    setIsMenuOpened,
+    setCurrentCoinData
+} = currenciesSlice.actions;

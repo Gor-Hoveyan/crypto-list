@@ -27,6 +27,11 @@
     .changePercentNegative {
         color: red;
     }
+
+    .coinLink {
+        text-decoration: none;
+        color: black;
+    }
 }
 
 .darkTbody {
@@ -56,6 +61,11 @@
             background-color: $dark-color2;
         }
     }
+    .lightTbody, .darkTbody {
+        .coinLink:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 
@@ -68,6 +78,11 @@
     .darkTbody {
         tr:hover {
             background-color: $dark-color2;
+        }
+    }
+    .lightTbody, .darkTbody {
+        .coinLink:hover {
+            text-decoration: underline;
         }
     }
 }

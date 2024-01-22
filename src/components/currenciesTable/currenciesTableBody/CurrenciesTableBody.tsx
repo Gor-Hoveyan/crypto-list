@@ -3,6 +3,7 @@ import style from './CurrenciesTableBody.module.scss';
 import { slicePrice, numberWithCommas, slicePercent } from "../../../utils/functions";
 import { CoinData } from "../../../utils/schema";
 import { useAppSelector } from "../../../redux/hooks";
+import { NavLink } from "react-router-dom";
 
 function CurrenciesTableBody() {
     const isDataLoading: boolean = useAppSelector(state => state.currenciesSlice.isDataLoading);
@@ -21,7 +22,7 @@ function CurrenciesTableBody() {
                             {(isDataLoading && coin.PNGSRC) ?
                                 <img className={style.coinPNG} src={coin.PNGSRC} alt={coin.name} /> : ''
                             }
-                            {coin.name ? coin.name : ''}
+                            {coin.name ? <NavLink className={style.coinLink} to={`/coin/${coin.name}`}>{coin.name}</NavLink> : ''}
                         </div>
                     </td>
                     <td>{coin.priceUsd ? numberWithCommas(slicePrice(coin.priceUsd, language)) : ''}$</td>
