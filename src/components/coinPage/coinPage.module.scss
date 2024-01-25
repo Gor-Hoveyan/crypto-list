@@ -1,0 +1,108 @@
+@import '../../utils/variables.scss';
+@import '../../utils/mediaBreakpoints.scss';
+
+@mixin coinPageContainer {
+    justify-self: center;
+    width: 80%;
+    max-height: max-content;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10%;
+    margin: 0px auto;
+    justify-content: center;
+    box-sizing: border-box;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+    .coinDataContainer {
+        width: max-content;
+        padding: 3% 7%;
+        border-radius: 5%;
+        margin: 5% 20%;
+        text-wrap: nowrap;
+        font-size: $defaultFont-size;
+        font-weight: bold;
+        height: max-content;
+        p {
+            margin-bottom: 5%;
+        }
+        .changePercentPositive {
+            color: green;
+        }
+    
+        .changePercentNegative {
+            color: red;
+        }
+
+        img {
+            float: right;
+        }
+        h1 {
+            margin-bottom: 10%;
+        }
+    }
+    .chartNavDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: baseline;
+        padding: 1%;
+        p {
+            padding: 1%;
+        }
+        
+    }
+    h2 {
+        display: flex;
+        justify-content: center;
+        white-space: nowrap;
+    }
+}
+
+.lightCoinPageContainer {
+    @include coinPageContainer;
+
+    .coinDataContainer {
+        background-color: white;
+    }
+    .chartNavDiv {
+        p {
+            border-radius: 50%;
+            background-color: white;
+            &:hover {
+                background-color: $bg-gray-color;
+            }
+        }
+    }
+    #activeInterval {
+        color: blue;
+        font-weight: bolder;
+        border: 1px solid blue;
+    }
+}
+
+.darkCoinPageContainer {
+    @include coinPageContainer;
+
+    .coinDataContainer {
+        background-color: $dark-color2;
+        color: white;
+    }
+    .chartNavDiv {
+        p {
+            border-radius: 50%;
+            background-color: $dark-color2;
+            color: white;
+            &:hover {
+                background-color: $dark-color1;
+            }
+        }
+    }
+    h2 {
+        color: white;
+    }
+    #activeInterval {
+        color: rgb(0, 183, 255);
+        border: 1px solid rgb(0, 183, 255);
+        font-weight: bolder;
+    }
+}

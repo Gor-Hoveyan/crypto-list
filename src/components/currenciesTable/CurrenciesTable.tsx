@@ -6,8 +6,6 @@ import Pagination from "../pagination/Pagination";
 import CurrenciesTableHead from "./currenciesTableHead/CurrenciesTableHead";
 import CurrenciesTableBody from "./currenciesTableBody/CurrenciesTableBody";
 
-let returningFunc:(time: string, paginationOffset?: number) => Promise<0 | undefined>;
-
 function CurrenciesTable() {
     const dispatch = useAppDispatch();
     let offset: number = useAppSelector(state => state.currenciesSlice.offset);
@@ -59,7 +57,7 @@ function CurrenciesTable() {
             dispatch(setIsDataLoading(true));
         }
     }
-    returningFunc = getData;
+
     useEffect(() => {
         getData('first');
         dispatch(setPaginationNumbers());
@@ -75,7 +73,5 @@ function CurrenciesTable() {
         </>
     );
 }
-export function updateData() {
-    return returningFunc('');
-}
+
 export default CurrenciesTable;

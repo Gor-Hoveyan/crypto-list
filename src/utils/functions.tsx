@@ -31,7 +31,7 @@ function slicePrice(price: string, lang: string) {
     let billion: string;
     let million: string;
     let res: string;
-    if(lang === 'en') {
+    if (lang === 'en') {
         billion = ' Billion';
         million = ' Million';
         res = priceSlicer(price, billion, million);
@@ -48,7 +48,7 @@ function numberWithCommas(x: string) {
 }
 
 function slicePercent(percent: string): string {
-    if(percent[0] === '-') {
+    if (percent[0] === '-') {
         percent.slice(1, -1);
         return percent.slice(1, 5);
     }

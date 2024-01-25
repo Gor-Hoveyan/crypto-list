@@ -1,16 +1,15 @@
 import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
 import { CoinData } from "../../utils/schema";
-import { getData } from "../../api/api";
-
+import { getTableData } from "../../api/api";
 
 interface FetchDataParams {
     offset: number;
 }
 
 export const fetchData = createAsyncThunk<CoinData[], FetchDataParams>(
-    'data/FetchData',
+    'data/FetchTableData',
     async ({ offset }) => {
-        const data: CoinData[] = await getData(offset);
+        const data: CoinData[] = await getTableData(offset);
         return data;
     }
 );
@@ -25,7 +24,6 @@ type InitialState = {
     isDarkMode: boolean,
     language: string,
     isMenuOpened: boolean,
-    currentCoinData: CoinData | undefined
 }
 
 const initialState: InitialState = {
@@ -38,7 +36,6 @@ const initialState: InitialState = {
     isDarkMode: false,
     language: 'en',
     isMenuOpened: false,
-    currentCoinData: undefined
 }
 
 const currenciesSlice = createSlice({
@@ -127,18 +124,7 @@ const currenciesSlice = createSlice({
         setIsMenuOpened: (state) => {
             state.isMenuOpened = !state.isMenuOpened;
         },
-        setCurrentCoinData: (state, action: PayloadAction<string | undefined>) => {
-            if (action.payload) {
-                state.data.map(coin => {
-                    if (coin.name === action.payload) {
-                        state.currentCoinData = coin;
-                    }
-                })
-            }
-
-        }
-    }
-})
+}});
 
 export default currenciesSlice.reducer;
 export const { setIsDataLoading,
@@ -149,6 +135,5 @@ export const { setIsDataLoading,
     setIsDarkMode,
     setCurrentPage,
     changeLanguage,
-    setIsMenuOpened,
-    setCurrentCoinData
+    setIsMenuOpened
 } = currenciesSlice.actions;

@@ -97,7 +97,7 @@ function CurrenciesTableHead() {
                 </p>
             </th>
             <th>
-                <p onClick={() => handleSortingByVol()}>{language === 'en' ? 'Volume(24H)' : 'Объем(24Ч)'}</p>
+                <p onClick={() => handleSortingByVol()}>{language === 'en' ? 'Volume(24H)' : 'Объем(24ч)'}</p>
                 <p data-tooltip-variant={isDarkMode ? 'light' : 'dark'} data-tooltip-place="bottom-start" data-tooltip-id='RankTooltip' data-tooltip-content={language === 'en' ? volumeTooltipContentEn : volumeTooltipContentRu} className={style.exclamationCircle}>
                     <BsExclamationCircle size='20px' color='dodgerblue' />
                 </p>
@@ -109,13 +109,13 @@ function CurrenciesTableHead() {
                 </p>
             </th>
             <th>
-                <p onClick={() => handleSortingByAVG()}>{language === 'en' ? 'Average Price(24H)' : 'Средняя цена(24Ч)'}</p>
+                <p onClick={() => handleSortingByAVG()}>{language === 'en' ? 'Average Price(24H)' : 'Средняя цена(24ч)'}</p>
                 <p data-tooltip-variant={isDarkMode ? 'light' : 'dark'} data-tooltip-place="bottom-start" data-tooltip-id='RankTooltip' data-tooltip-content={language === 'en' ? avgTooltipContentEn : avgTooltipContentRu} className={style.exclamationCircle}>
                     <BsExclamationCircle size='20px' color='dodgerblue' />
                 </p>
             </th>
             <th>
-                <p onClick={() => handleSortingByChange()}>{language === 'en' ? 'Change(24H)' : 'Изменение(24Ч)'}</p>
+                <p onClick={() => handleSortingByChange()}>{language === 'en' ? 'Change(24H)' : 'Изменение(24ч)'}</p>
                 <p data-tooltip-variant={isDarkMode ? 'light' : 'dark'} data-tooltip-place="bottom-start" data-tooltip-id='RankTooltip' data-tooltip-content={language === 'en' ? changeTooltipContentEn : changeTooltipContentRu} className={style.exclamationCircle}>
                     <BsExclamationCircle size='20px' color='dodgerblue' />
                 </p>

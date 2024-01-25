@@ -30,7 +30,6 @@
 
     .coinLink {
         text-decoration: none;
-        color: black;
     }
 }
 
@@ -39,12 +38,18 @@
     td {
         border-top: 1px solid lightgray;
     }
+    .coinLink {
+        color: white;
+    }
 }
 
 .lightTbody {
     @include td-components-style;
     td {
         border-top: 1px solid lightgray;
+    }
+    .coinLink {
+        color: black;
     }
 }
 

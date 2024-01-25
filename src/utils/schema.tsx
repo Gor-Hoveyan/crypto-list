@@ -21,4 +21,12 @@ type PNG = {
     src: string
 }
 
-export type {CoinData, Data, PNG};
+type ChartData = {
+    priceUsd: string,
+    time: string,
+    date: string,
+}
+
+type ChartInterval = 'm1' | 'm5' | 'm15' | 'm30' | 'h1' | 'h2' | 'h6' | 'h12';
+
+export type {CoinData, Data, PNG, ChartData, ChartInterval};

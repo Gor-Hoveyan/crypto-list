@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import currenciesSlice from "./reducers/currenciesSlice";
+import currentCoinSlice from "./reducers/currentCoinSlice";
 
 const store = configureStore({
     reducer: {
-        currenciesSlice: currenciesSlice
+        currenciesSlice: currenciesSlice,
+        currentPageSlice: currentCoinSlice,
     },
 })
 
