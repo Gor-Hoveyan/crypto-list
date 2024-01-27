@@ -13,6 +13,7 @@
     box-sizing: border-box;
     grid-template-columns: 20% 80%;
     grid-template-rows: 100%;
+
     .coinDataContainer {
         width: max-content;
         padding: 3% 7%;
@@ -22,13 +23,15 @@
         font-size: $defaultFont-size;
         font-weight: bold;
         height: max-content;
+
         p {
             margin-bottom: 5%;
         }
+
         .changePercentPositive {
             color: green;
         }
-    
+
         .changePercentNegative {
             color: red;
         }
@@ -36,25 +39,29 @@
         img {
             float: right;
         }
+
         h1 {
             margin-bottom: 10%;
         }
     }
+
     .chartNavDiv {
         display: flex;
         flex-direction: row;
         justify-content: end;
         align-items: baseline;
         padding: 1%;
+
         p {
             padding: 1%;
+            user-select: none;
         }
-        
+
     }
+
     h2 {
-        display: flex;
-        justify-content: center;
         white-space: nowrap;
+        width: 65%;
     }
 }
 
@@ -64,15 +71,18 @@
     .coinDataContainer {
         background-color: white;
     }
+
     .chartNavDiv {
         p {
             border-radius: 50%;
             background-color: white;
+
             &:hover {
                 background-color: $bg-gray-color;
             }
         }
     }
+
     #activeInterval {
         color: blue;
         font-weight: bolder;
@@ -87,19 +97,23 @@
         background-color: $dark-color2;
         color: white;
     }
+
     .chartNavDiv {
         p {
             border-radius: 50%;
             background-color: $dark-color2;
             color: white;
+
             &:hover {
                 background-color: $dark-color1;
             }
         }
     }
+
     h2 {
         color: white;
     }
+
     #activeInterval {
         color: rgb(0, 183, 255);
         border: 1px solid rgb(0, 183, 255);
@@ -107,35 +121,144 @@
     }
 }
 
-@include tablet {
-    .darkCoinPageContainer, .lightCoinPageContainer {
+@include desktop {
+
+    .darkCoinPageContainer,
+    .lightCoinPageContainer {
         grid-template-rows: auto auto;
         grid-template-columns: 100%;
+        width: 100%;
+        grid-gap: 3%;
+
+        .coinDataContainer {
+            max-width: 80%;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 7%;
+        }
+
+        .priceChart {
+            min-width: 95%;
+            height: fit-content;
+            margin: 0px auto;
+            align-self: center;
+            justify-self: center;
+            margin-bottom: 10%;
+        }
+    }
+}
+
+@include laptop {
+
+    .darkCoinPageContainer,
+    .lightCoinPageContainer {
+        grid-template-rows: auto auto;
+        grid-template-columns: 100%;
+        width: 100%;
+
+        .coinDataContainer {
+            max-width: 80%;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 7%;
+        }
+
+        .priceChart {
+            min-width: 95%;
+            height: fit-content;
+            margin: 0px auto;
+            align-self: center;
+            justify-self: center;
+            margin-bottom: 10%;
+        }
+    }
+}
+
+@include largeDesktop {
+
+    .darkCoinPageContainer,
+    .lightCoinPageContainer {
+        width: 90%;
+    }
+
+    .coinDataContainer {
+        p {
+            font-size: 1.15vw;
+        }
+    }
+
+    .priceChart {
+        min-width: 100%;
+        height: fit-content;
+        margin: 0px auto;
+        align-self: center;
+        justify-self: center;
+        margin-bottom: 5%;
+    }
+}
+
+@include tablet {
+
+    .darkCoinPageContainer,
+    .lightCoinPageContainer {
+        grid-template-rows: auto auto;
+        grid-template-columns: 100%;
+        width: 100%;
+
+        .coinDataContainer {
+            max-width: 80%;
+            font-size: 3vw;
+            width: 100%;
+            margin: 0px auto;
+            margin-top: 7%;
+        }
+
+        h2 {
+            font-size: 3vw;
+        }
+
+        .priceChart {
+            min-width: 100%;
+            height: fit-content;
+            margin: 0px auto;
+            align-self: center;
+            justify-self: center;
+            margin-bottom: 30%;
+        }
     }
 }
 
 
 @include mobile {
-    .darkCoinPageContainer, .lightCoinPageContainer {
+
+    .darkCoinPageContainer,
+    .lightCoinPageContainer {
         grid-template-rows: auto auto;
         grid-template-columns: 100%;
         width: 100%;
+
         .coinDataContainer {
             max-width: 80%;
-            font-size: 0.7rem;
+            font-size: 3vw;
             width: 100%;
             margin: 0px auto;
-            img {
-                width: 48px;
-                height:48px;
-            }
         }
+
         h2 {
-            font-size: 1rem;
+            display: none;
         }
+
+        .chartNavDiv {
+            justify-content: center;
+        }
+
         .priceChart {
-            width: 100%;
-            height: auto;
+            min-width: 100%;
+            height: fit-content;
+            margin: 0px auto;
+            align-self: center;
+            justify-self: center;
+            margin-bottom: 30%;
         }
     }
 }

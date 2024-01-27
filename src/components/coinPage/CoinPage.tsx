@@ -65,8 +65,11 @@ function CoinPage() {
                         </p>
                     </div>
                     <div className={style.priceChart}>
-                        <h2>{language === 'en' ? 'Coin\'s price change history' : 'История изменения цены'}</h2>
+                        
                         <div className={style.chartNavDiv}>
+                            <h2>
+                                {language === 'en' ? 'Coin\'s price change history' : 'История изменения цены'}
+                            </h2>
                             <p id={chartInterval.m1 ? `${style.activeInterval}` : ''} onClick={() => handleChartInterval('m1')}>
                                 {language === 'en' ? '1D' : '1Д'}
                             </p>
