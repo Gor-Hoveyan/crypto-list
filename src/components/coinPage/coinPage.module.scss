@@ -106,3 +106,30 @@
         font-weight: bolder;
     }
 }
+
+@include tablet {
+    .darkCoinPageContainer, .lightCoinPageContainer {
+        grid-template-rows: auto auto;
+        grid-template-columns: 100%;
+    }
+}
+
+
+@include mobile {
+    .darkCoinPageContainer, .lightCoinPageContainer {
+        grid-template-rows: auto auto;
+        grid-template-columns: 100%;
+
+        .coinDataContainer {
+            max-width: 80%;
+            font-size: 0.7rem;
+            img {
+                width: 48px;
+                height:48px;
+            }
+        }
+        h2 {
+            font-size: 1rem;
+        }
+    }
+}

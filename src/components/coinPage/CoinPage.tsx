@@ -92,7 +92,8 @@ function CoinPage() {
                                 {language === 'en' ? '1Y' : '1Г'}
                             </p>
                         </div>
-                        <PriceChart />
+                        <div className={style.priceChartContainer}>
+                        <PriceChart /></div>
                     </div>
 
                 </div> : 'Loading...'}</>
