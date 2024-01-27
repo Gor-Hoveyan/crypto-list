@@ -48,7 +48,7 @@ function PriceChart() {
                         borderWidth: 1,
                         borderColor: '#3C7FF9',
                     }]
-                }} />
+                }} options={{responsive: true}}/>
             }
         </div>
     )
