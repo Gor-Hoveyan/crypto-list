@@ -21,15 +21,15 @@ Interactive and intuitive navigation throughout the application
 <h2>Technologies</h2>
 
 
-React: Used for building the user interface and managing components.
+<b>React</b>: Used for building the user interface and managing components.
 
-Redux Toolkit: Manages the state of the application and interacts with the CoinCap API.
+<b>Redux Toolkit</b>: Manages the state of the application and interacts with the CoinCap API.
 
-TypeScript: Provides static typing, enhancing code readability and maintainability.
+<b>TypeScript</b>: Provides static typing, enhancing code readability and maintainability.
 
-Sass: Preprocessor for CSS, allowing for organized and structured styling.
+<b>Sass</b>: Preprocessor for CSS, allowing for organized and structured styling.
 
-Charting Library (Chart.js): Used for creating the price change chart.
+<b>Charting Library (Chart.js)</b>: Used for creating the price change chart.
 
 
 <h2>Installation and Running</h2>
