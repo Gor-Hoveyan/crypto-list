@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+<h1>CryptoList App</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<h2>Project Description</h2>
 
-In the project directory, you can run:
+  Crypto Tracker App is a web application designed to track information about cryptocurrencies, providing a list of cryptocurrencies, detailed information about each, and a price chart for the selected currency.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h2>Features</h2>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+  Displaying a list of cryptocurrencies with essential information
+  
+  Detailed information about each cryptocurrency, including current price, trading volume, market capitalization, and other metrics
+  
+  Price chart for tracking the price changes in the selected currency
+  
+  Interactive and intuitive navigation throughout the application
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<h2>Technologies</h2>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  <b>React</b>: Used for building the user interface and managing components.
+  
+  <b>Redux Toolkit</b>: Manages the state of the application and interacts with the CoinCap API.
+  
+  <b>TypeScript</b>: Provides static typing, enhancing code readability and maintainability.
+  
+  <b>Sass</b>: Preprocessor for CSS, allowing for organized and structured styling.
+  
+  <b>Charting Library (Chart.js)</b>: Used for creating the price change chart.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+<h2>Installation and Running</h2>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  
+  Clone the repository: git clone https://github.com/Gor-Hoveyan/CryptoList
+  
+  Navigate to the project directory
+  
+  Install dependencies: npm install
+  
+  Run the application: npm start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<h2>Additional Configuration</h2>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+  You may need to create an account and obtain an API key from CoinCap, then add the key to the configuration file for API interaction.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h2>Contributions and Feedback</h2>
+
+  
+  Your contributions are welcome! If you have ideas for improving the project or have found a bug, please create a new issue or pull request.
+
