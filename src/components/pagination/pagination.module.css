@@ -1,0 +1,83 @@
+.lightPaginationContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  float: center;
+  margin-bottom: 3%;
+}
+.lightPaginationContainer .paginationButton {
+  border: none;
+  margin: 0px 15px;
+  border-radius: 5px;
+  width: 75px;
+  height: 40px;
+  font-size: 1.125rem;
+}
+.lightPaginationContainer .paginationButton:hover {
+  cursor: pointer;
+}
+.lightPaginationContainer .pageNumber {
+  padding: 0px 2px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.lightPaginationContainer .pageNumber:hover {
+  font-weight: bold;
+}
+.lightPaginationContainer .ellipses {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.lightPaginationContainer .paginationButton {
+  background-color: white;
+}
+.lightPaginationContainer .paginationButton:hover {
+  border: 1px solid black;
+}
+
+.darkPaginationContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  float: center;
+  margin-bottom: 3%;
+}
+.darkPaginationContainer .paginationButton {
+  border: none;
+  margin: 0px 15px;
+  border-radius: 5px;
+  width: 75px;
+  height: 40px;
+  font-size: 1.125rem;
+}
+.darkPaginationContainer .paginationButton:hover {
+  cursor: pointer;
+}
+.darkPaginationContainer .pageNumber {
+  padding: 0px 2px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.darkPaginationContainer .pageNumber:hover {
+  font-weight: bold;
+}
+.darkPaginationContainer .ellipses {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.darkPaginationContainer .paginationButton {
+  background-color: #112447;
+  color: white;
+}
+.darkPaginationContainer .paginationButton:hover {
+  border: 1px solid white;
+}
+.darkPaginationContainer .pageNumber, .darkPaginationContainer .ellipses {
+  color: #6188FF;
+}/*# sourceMappingURL=pagination.module.css.map */

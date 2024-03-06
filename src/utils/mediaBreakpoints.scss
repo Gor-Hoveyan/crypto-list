@@ -7,19 +7,19 @@
 }
 
 @mixin desktop() {
-    @media (max-width: $breakpoint-xxl) {
+    @media (max-width: $breakpoint-xxl ) and (min-width: $breakpoint-xl) {
         @content
     }
 }
 
 @mixin laptop() {
-    @media (max-width: $breakpoint-xl) {
+    @media (max-width: $breakpoint-xl) and (min-width: $breakpoint-md) {
         @content
     }
 }
 
 @mixin tablet() {
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-md) and (min-width: $breakpoint-sl) {
         @content
     }
 }

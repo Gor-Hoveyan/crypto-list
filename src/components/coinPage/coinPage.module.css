@@ -1,0 +1,285 @@
+.lightCoinPageContainer {
+  justify-self: center;
+  width: 80%;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10%;
+  margin: 0px auto;
+  justify-content: center;
+  box-sizing: border-box;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 100%;
+}
+.lightCoinPageContainer .coinDataContainer {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 3% 7%;
+  border-radius: 5%;
+  margin: 5% 20%;
+  text-wrap: nowrap;
+  font-size: 1.125rem;
+  font-weight: bold;
+  height: -moz-max-content;
+  height: max-content;
+}
+.lightCoinPageContainer .coinDataContainer p {
+  margin-bottom: 5%;
+}
+.lightCoinPageContainer .coinDataContainer .changePercentPositive {
+  color: green;
+}
+.lightCoinPageContainer .coinDataContainer .changePercentNegative {
+  color: red;
+}
+.lightCoinPageContainer .coinDataContainer img {
+  float: right;
+}
+.lightCoinPageContainer .coinDataContainer h1 {
+  margin-bottom: 10%;
+}
+.lightCoinPageContainer .chartNavDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: baseline;
+  padding: 1%;
+}
+.lightCoinPageContainer .chartNavDiv p {
+  padding: 1%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.lightCoinPageContainer h2 {
+  white-space: nowrap;
+  width: 65%;
+}
+.lightCoinPageContainer .coinDataContainer {
+  background-color: white;
+}
+.lightCoinPageContainer .chartNavDiv p {
+  border-radius: 50%;
+  background-color: white;
+}
+.lightCoinPageContainer .chartNavDiv p:hover {
+  background-color: #F0F2F5;
+}
+.lightCoinPageContainer #activeInterval {
+  color: blue;
+  font-weight: bolder;
+  border: 1px solid blue;
+}
+
+.darkCoinPageContainer {
+  justify-self: center;
+  width: 80%;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10%;
+  margin: 0px auto;
+  justify-content: center;
+  box-sizing: border-box;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 100%;
+}
+.darkCoinPageContainer .coinDataContainer {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 3% 7%;
+  border-radius: 5%;
+  margin: 5% 20%;
+  text-wrap: nowrap;
+  font-size: 1.125rem;
+  font-weight: bold;
+  height: -moz-max-content;
+  height: max-content;
+}
+.darkCoinPageContainer .coinDataContainer p {
+  margin-bottom: 5%;
+}
+.darkCoinPageContainer .coinDataContainer .changePercentPositive {
+  color: green;
+}
+.darkCoinPageContainer .coinDataContainer .changePercentNegative {
+  color: red;
+}
+.darkCoinPageContainer .coinDataContainer img {
+  float: right;
+}
+.darkCoinPageContainer .coinDataContainer h1 {
+  margin-bottom: 10%;
+}
+.darkCoinPageContainer .chartNavDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: baseline;
+  padding: 1%;
+}
+.darkCoinPageContainer .chartNavDiv p {
+  padding: 1%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.darkCoinPageContainer h2 {
+  white-space: nowrap;
+  width: 65%;
+}
+.darkCoinPageContainer .coinDataContainer {
+  background-color: #112447;
+  color: white;
+}
+.darkCoinPageContainer .chartNavDiv p {
+  border-radius: 50%;
+  background-color: #112447;
+  color: white;
+}
+.darkCoinPageContainer .chartNavDiv p:hover {
+  background-color: #0C1320;
+}
+.darkCoinPageContainer h2 {
+  color: white;
+}
+.darkCoinPageContainer #activeInterval {
+  color: rgb(0, 183, 255);
+  border: 1px solid rgb(0, 183, 255);
+  font-weight: bolder;
+}
+
+@media (max-width: 1200px) and (min-width: 1000px) {
+  .darkCoinPageContainer,
+  .lightCoinPageContainer {
+    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
+    width: 100%;
+    grid-gap: 3%;
+  }
+  .darkCoinPageContainer .coinDataContainer,
+  .lightCoinPageContainer .coinDataContainer {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 7%;
+  }
+  .darkCoinPageContainer .priceChart,
+  .lightCoinPageContainer .priceChart {
+    min-width: 95%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0px auto;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 10%;
+  }
+}
+@media (max-width: 1000px) and (min-width: 767px) {
+  .darkCoinPageContainer,
+  .lightCoinPageContainer {
+    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
+    width: 100%;
+  }
+  .darkCoinPageContainer .coinDataContainer,
+  .lightCoinPageContainer .coinDataContainer {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 7%;
+  }
+  .darkCoinPageContainer .priceChart,
+  .lightCoinPageContainer .priceChart {
+    min-width: 95%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0px auto;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 10%;
+  }
+}
+@media (min-width: 1200px) {
+  .darkCoinPageContainer,
+  .lightCoinPageContainer {
+    width: 89%;
+  }
+  .coinDataContainer p {
+    font-size: 1.15vw;
+  }
+  .priceChart {
+    min-width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0px auto;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 5%;
+  }
+}
+@media (max-width: 767px) and (min-width: 576px) {
+  .darkCoinPageContainer,
+  .lightCoinPageContainer {
+    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
+    width: 100%;
+  }
+  .darkCoinPageContainer .coinDataContainer,
+  .lightCoinPageContainer .coinDataContainer {
+    max-width: 80%;
+    font-size: 3vw;
+    width: 100%;
+    margin: 0px auto;
+    margin-top: 7%;
+  }
+  .darkCoinPageContainer h2,
+  .lightCoinPageContainer h2 {
+    font-size: 3vw;
+  }
+  .darkCoinPageContainer .priceChart,
+  .lightCoinPageContainer .priceChart {
+    min-width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0px auto;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 30%;
+  }
+}
+@media (max-width: 576px) {
+  .darkCoinPageContainer,
+  .lightCoinPageContainer {
+    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
+    width: 100%;
+  }
+  .darkCoinPageContainer .coinDataContainer,
+  .lightCoinPageContainer .coinDataContainer {
+    max-width: 80%;
+    font-size: 3vw;
+    width: 100%;
+    margin: 0px auto;
+  }
+  .darkCoinPageContainer h2,
+  .lightCoinPageContainer h2 {
+    display: none;
+  }
+  .darkCoinPageContainer .chartNavDiv,
+  .lightCoinPageContainer .chartNavDiv {
+    justify-content: center;
+  }
+  .darkCoinPageContainer .priceChart,
+  .lightCoinPageContainer .priceChart {
+    min-width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0px auto;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 30%;
+  }
+}/*# sourceMappingURL=coinPage.module.css.map */
