@@ -92,7 +92,6 @@ const currentCoinSlice = createSlice({
                 h12: false,
             };
             state.chartInterval[action.payload] = !state.chartInterval[action.payload];
-            console.log(state.chartInterval);
         }
     }
 });
