@@ -8,7 +8,7 @@ function Footer() {
 
     return (
         <footer className={isDarkMode ? style.darkFooterContainer : style.lightFooterContainer}>
-            <p className={style.footerParagraph}>{language === 'en' ? '2024 © Currency List | All rights reserved' : '2024 © Currency List | Все права защищены'}</p>
+            <p className={style.footerParagraph}>{language === 'en' ? '2025 © Currency List | All rights reserved' : '2024 © Currency List | Все права защищены'}</p>
             <p className={style.footerParagraph}>{language === 'en' ? 'Used API' : 'Используемый API'} : <a href="https://docs.coincap.io/" target="_blank" rel="noreferrer">CoinCap API 2.0</a></p>
         </footer>
     );

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import style from './header.module.scss';
 import { useAppSelector, useAppDispatch } from "../../redux/hooks";
 import LanguageChanger from "./languageChanger/LanguageChanger";
