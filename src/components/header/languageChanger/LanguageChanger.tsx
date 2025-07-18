@@ -1,22 +1,25 @@
 import React from "react";
-import style from './languageChanger.module.scss';
-import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
-import { changeLanguage } from "../../../redux/reducers/currenciesSlice";
+import style from "./languageChanger.module.scss";
+import { useAppSelector } from "../../../redux/hooks";
+import i18n from "../../../i18n";
 
 function LanguageChanger() {
-    const isDarkMode: boolean = useAppSelector(state => state.currenciesSlice.isDarkMode);
-    const dispatch = useAppDispatch();
+  const isDarkMode: boolean = useAppSelector(
+    (state) => state.currenciesSlice.isDarkMode
+  );
 
-    function handleLanguageChange(lang: string) {
-        dispatch(changeLanguage(lang));
-    }
-
-    return (
-        <select onChange={(event) => handleLanguageChange(event.target.value)} className={isDarkMode ? style.darkLanguageChanger : style.lightLanguageChanger}>
-            <option value='en'>English</option>
-            <option value='ru'>Русский</option>
-        </select>
-    );
+  return (
+    <select
+      onChange={(event) => i18n.changeLanguage(event.target.value)}
+      className={
+        isDarkMode ? style.darkLanguageChanger : style.lightLanguageChanger
+      }
+      defaultValue={i18n.language}
+    >
+      <option value="en">English</option>
+      <option value="ru">Русский</option>
+    </select>
+  );
 }
 
 export default LanguageChanger;
