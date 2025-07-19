@@ -5,6 +5,7 @@ import LanguageChanger from "../languageChanger/LanguageChanger";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
 import { MdOutlineMenu } from "react-icons/md";
 import { setIsMenuOpened } from "../../../redux/reducers/currenciesSlice";
+import { useTranslation } from "react-i18next";
 
 function BurgerMenu() {
   const isMenuOpened: boolean = useAppSelector(
@@ -18,13 +19,15 @@ function BurgerMenu() {
     dispatch(setIsMenuOpened());
   }
 
+  const { t } = useTranslation();
+
   return (
     <nav
       className={isMenuOpened ? style.burgerMenuNav : style.hiddenBurgerMenuNav}
     >
       <ul className={isDarkMode ? style.darkMenuList : style.lightMenuList}>
         <li>
-          <h1>Main</h1>
+          <h1>{t("burgerMenu.main")}</h1>
         </li>
         <li className={style.listThemeChanger}>
           <ThemeChanger />
@@ -37,7 +40,10 @@ function BurgerMenu() {
             className={style.burgerMenuOpener}
             onClick={() => handleBurgerMenu()}
           >
-            <MdOutlineMenu size="30px" color={isDarkMode ? "white" : "black"} />
+            <MdOutlineMenu
+              size="30px"
+              color={isDarkMode ? "#6188FF" : "black"}
+            />
           </p>
         </li>
       </ul>

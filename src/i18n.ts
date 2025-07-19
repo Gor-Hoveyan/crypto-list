@@ -58,6 +58,13 @@ const resources = {
         back: "Back",
         next: "Next",
       },
+      languageChanger: {
+        en: "English",
+        ru: "Русский",
+      },
+      burgerMenu: {
+        main: "Main",
+      },
     },
   },
   ru: {
@@ -114,12 +121,20 @@ const resources = {
         back: "Назад",
         next: "Вперёд",
       },
+      languageChanger: {
+        en: "English",
+        ru: "Русский",
+      },
+      burgerMenu: {
+        main: "Главное",
+      },
     },
   },
 };
 
 i18n.use(initReactI18next).use(languageDetector).init({
   resources,
+  lng: "en",
 });
 
 export default i18n;
