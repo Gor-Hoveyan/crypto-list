@@ -11,9 +11,9 @@ import style from "./coinPage.module.scss";
 import { ChartInterval, CoinData } from "../../utils/schema";
 import PriceChart from "./priceChart/PriceChart";
 import { fetchChartsData } from "../../redux/reducers/currentCoinSlice";
-import { useTranslation } from "react-i18next";
 import Loading from "../loading/Loading";
 import CoinDataContainer from "./coinDataContainer/CoinDataContainer";
+import ChartNav from "./chartNav/ChartNav";
 
 function CoinPage() {
   const coinData: CoinData = useAppSelector(
@@ -24,10 +24,6 @@ function CoinPage() {
     (state) => state.currenciesSlice.isDarkMode
   );
   const { coinName } = useParams();
-  const chartInterval = useAppSelector(
-    (state) => state.currentPageSlice.chartInterval
-  );
-  const { t } = useTranslation();
 
   async function handleChartInterval(interval: ChartInterval): Promise<any> {
     const data: any = await dispatch(
@@ -60,57 +56,7 @@ function CoinPage() {
         >
           <CoinDataContainer coinData={coinData} />
           <div className={style.priceChart}>
-            <div className={style.chartNavDiv}>
-              <h2>{t("coinPage.history")}</h2>
-              <p
-                id={chartInterval.m1 ? `${style.activeInterval}` : ""}
-                onClick={() => handleChartInterval("m1")}
-              >
-                {t("coinPage.1D")}
-              </p>
-              <p
-                id={chartInterval.m5 ? `${style.activeInterval}` : ""}
-                onClick={() => handleChartInterval("m5")}
-              >
-                {t("coinPage.5D")}
-              </p>
-              <p
-                id={chartInterval.m15 ? `${style.activeInterval}` : ""}
-                onClick={() => handleChartInterval("m15")}
-              >
-                {t("coinPage.7D")}
-              </p>
-              <p
-                id={chartInterval.m30 ? `${style.activeInterval}` : ""}
-                onClick={() => handleChartInterval("m30")}
-              >
-                {t("coinPage.15D")}
-              </p>
-              <p
-                id={chartInterval.h1 ? `${style.activeInterval}` : ""}
-                onClick={() => handleChartInterval("h1")}
-              >
-                {t("coinPage.1M")}
-              </p>
-              <p
-                id={chartInterval.h2 ? `${style.activeInterval}` : ""}
-                onClick={() => handleChartInterval("h2")}
-              >
-                {t("coinPage.2M")}
-              </p>
-              <p
-                id={chartInterval.h6 ? `${style.activeInterval}` : ""}
-                onClick={() => handleChartInterval("h6")}
-              >
-                {t("coinPage.6M")}
-              </p>
-              <p
-                id={chartInterval.h12 ? `${style.activeInterval}` : ""}
-                onClick={() => handleChartInterval("h12")}
-              >
-                {t("coinPage.1Y")}
-              </p>
-            </div>
+            {coinName ? <ChartNav coinName={coinName} /> : <></>}
             <div className={style.chartDiv}>
               <PriceChart />
             </div>

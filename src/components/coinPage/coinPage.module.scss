@@ -8,77 +8,20 @@
   max-height: max-content;
   display: grid;
   grid-template-columns: auto;
-  grid-gap: 10%;
+  grid-gap: 2%;
   margin: 0px auto;
   justify-content: center;
   box-sizing: border-box;
   grid-template-columns: 20% 80%;
   grid-template-rows: 100%;
-
-  .chartNavDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: baseline;
-    padding: 1%;
-
-    p {
-      padding: 1%;
-      user-select: none;
-    }
-  }
-
-  h2 {
-    white-space: nowrap;
-    width: 65%;
-  }
 }
 
 .lightCoinPageContainer {
   @include coinPageContainer;
-
-  .chartNavDiv {
-    p {
-      border-radius: 50%;
-      background-color: white;
-
-      &:hover {
-        background-color: $bg-gray-color;
-      }
-    }
-  }
-
-  #activeInterval {
-    color: blue;
-    font-weight: bolder;
-    border: 1px solid blue;
-  }
 }
 
 .darkCoinPageContainer {
   @include coinPageContainer;
-
-  .chartNavDiv {
-    p {
-      border-radius: 50%;
-      background-color: $dark-color2;
-      color: white;
-
-      &:hover {
-        background-color: $dark-color1;
-      }
-    }
-  }
-
-  h2 {
-    color: white;
-  }
-
-  #activeInterval {
-    color: rgb(0, 183, 255);
-    border: 1px solid rgb(0, 183, 255);
-    font-weight: bolder;
-  }
 }
 
 @include desktop {
@@ -87,14 +30,6 @@
     grid-template-rows: auto auto;
     grid-template-columns: 100%;
     width: 100%;
-    grid-gap: 3%;
-
-    .coinDataContainer {
-      max-width: 80%;
-      width: 100%;
-      margin: 0 auto;
-      margin-top: 7%;
-    }
 
     .priceChart {
       min-width: 95%;
@@ -105,7 +40,7 @@
     }
   }
   .chartDiv {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
 }
 
@@ -122,7 +57,6 @@
       margin: 0px auto;
       align-self: center;
       justify-self: center;
-      margin-bottom: 10%;
     }
   }
 }
@@ -141,7 +75,6 @@
     margin: 0px auto;
     align-self: center;
     justify-self: center;
-    margin-bottom: 5%;
   }
   .chartDiv {
     margin-bottom: 200px;
@@ -154,19 +87,6 @@
     grid-template-rows: auto auto;
     grid-template-columns: 100%;
     width: 100%;
-
-    h2 {
-      font-size: 3vw;
-    }
-
-    .priceChart {
-      min-width: 100%;
-      height: fit-content;
-      margin: 0px auto;
-      align-self: center;
-      justify-self: center;
-      margin-bottom: 30%;
-    }
   }
 }
 
@@ -177,21 +97,12 @@
     grid-template-columns: 100%;
     width: 100%;
 
-    h2 {
-      display: none;
-    }
-
-    .chartNavDiv {
-      justify-content: center;
-    }
-
     .priceChart {
       min-width: 100%;
       height: fit-content;
       margin: 0px auto;
       align-self: center;
       justify-self: center;
-      margin-bottom: 30%;
     }
   }
 }

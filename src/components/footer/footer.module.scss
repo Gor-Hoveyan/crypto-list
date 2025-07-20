@@ -1,64 +1,66 @@
-@import '../../utils/variables.scss';
-@import '../../utils/mediaBreakpoints.scss';
+@import "../../utils/variables.scss";
+@import "../../utils/mediaBreakpoints.scss";
 
 @mixin footerContainer {
-    width: 100%;
-    padding: 1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    .footerParagraph {
-        font-weight: bold;
+  width: 100%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  .footerParagraph {
+    font-weight: bold;
 
-        a {
-            text-decoration: none;
-        }
-
-        padding: 0.5%;
+    a {
+      text-decoration: none;
     }
+
+    padding: 0.5%;
+  }
 }
 
 .lightFooterContainer {
-    @include footerContainer;
-    background-color: white;
-    .footerParagraph {
-        color: gray;
-        a {
-            color: green;
-        }
+  @include footerContainer;
+  background-color: white;
+  .footerParagraph {
+    color: gray;
+    a {
+      color: green;
     }
+  }
 }
 
 .darkFooterContainer {
-    @include footerContainer;
-    border-top: 1px solid gray;
-    background-color: $dark-color1;
-    .footerParagraph {
-        color: white;
-        a {
-            color: $link-color;
-        }
+  @include footerContainer;
+  border-top: 1px solid gray;
+  background-color: $dark-color1;
+  .footerParagraph {
+    color: white;
+    a {
+      color: $link-color;
     }
+  }
 }
 
 @include largeDesktop {
-    .darkFooterContainer, .lightFooterContainer {
-        .footerParagraph {
-            a:hover {
-                text-decoration: underline;
-            }
-        }
+  .darkFooterContainer,
+  .lightFooterContainer {
+    .footerParagraph {
+      a:hover {
+        text-decoration: underline;
+      }
     }
+  }
 }
 
 @include desktop {
-    .darkFooterContainer, .lightFooterContainer {
-        .footerParagraph {
-            a:hover {
-                text-decoration: underline;
-            }
-        }
+  .darkFooterContainer,
+  .lightFooterContainer {
+    .footerParagraph {
+      a:hover {
+        text-decoration: underline;
+      }
     }
+  }
 }
