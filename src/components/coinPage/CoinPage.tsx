@@ -9,15 +9,11 @@ import {
 } from "../../redux/reducers/currentCoinSlice";
 import style from "./coinPage.module.scss";
 import { ChartInterval, CoinData } from "../../utils/schema";
-import {
-  slicePrice,
-  slicePercent,
-  numberWithCommas,
-} from "../../utils/functions";
 import PriceChart from "./priceChart/PriceChart";
 import { fetchChartsData } from "../../redux/reducers/currentCoinSlice";
 import { useTranslation } from "react-i18next";
 import Loading from "../loading/Loading";
+import CoinDataContainer from "./coinDataContainer/CoinDataContainer";
 
 function CoinPage() {
   const coinData: CoinData = useAppSelector(
@@ -31,7 +27,7 @@ function CoinPage() {
   const chartInterval = useAppSelector(
     (state) => state.currentPageSlice.chartInterval
   );
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   async function handleChartInterval(interval: ChartInterval): Promise<any> {
     const data: any = await dispatch(
@@ -62,69 +58,7 @@ function CoinPage() {
               : style.lightCoinPageContainer
           }
         >
-          <div className={style.coinDataContainer}>
-            <h1 className={style.coinNameHeader}>
-              #{coinData?.rank} {coinData?.name}
-              <img src={coinData?.PNGSRC} alt="coin" />
-            </h1>
-
-            <p>
-              {t("coinPage.currentPrice")}
-              {coinData &&
-                numberWithCommas(slicePrice(coinData.priceUsd, i18n.language))}
-              $
-            </p>
-            <p>
-              {t("coinPage.marketCap")}{" "}
-              {coinData.marketCapUsd &&
-                numberWithCommas(
-                  slicePrice(coinData.marketCapUsd, i18n.language)
-                )}
-              $
-            </p>
-            <p>
-              {t("coinPage.vol")}{" "}
-              {coinData.volumeUsd24Hr &&
-                numberWithCommas(
-                  slicePrice(coinData.volumeUsd24Hr, i18n.language)
-                )}
-              $
-            </p>
-            <p>
-              {t("coinPage.avg")}{" "}
-              {coinData.vwap24Hr &&
-                numberWithCommas(slicePrice(coinData.vwap24Hr, i18n.language))}
-              $
-            </p>
-            <p>
-              {t("coinPage.circSup")}{" "}
-              {coinData.supply &&
-                numberWithCommas(coinData.supply.split(".")[0])}{" "}
-              {coinData?.symbol}
-            </p>
-            <p>
-              {t("coinPage.maxSup")}{" "}
-              {coinData.maxSupply
-                ? numberWithCommas(coinData.maxSupply.split(".")[0])
-                : "---"}{" "}
-              {coinData?.symbol}
-            </p>
-            <p>
-              {t("coinPage.change")}
-              <span
-                className={
-                  Number(coinData?.changePercent24Hr) > 0
-                    ? style.changePercentPositive
-                    : style.changePercentNegative
-                }
-              >
-                {Number(coinData?.changePercent24Hr) > 0 ? "+" : "-"}
-                {coinData.changePercent24Hr &&
-                  slicePercent(coinData.changePercent24Hr)}
-                %
-              </span>
-            </p>
-          </div>
+          <CoinDataContainer coinData={coinData} />
           <div className={style.priceChart}>
             <div className={style.chartNavDiv}>
               <h2>{t("coinPage.history")}</h2>
@@ -177,9 +111,10 @@ function CoinPage() {
                 {t("coinPage.1Y")}
               </p>
             </div>
-            <PriceChart />
+            <div className={style.chartDiv}>
+              <PriceChart />
+            </div>
           </div>
-          <Loading />
         </div>
       ) : (
         <Loading />

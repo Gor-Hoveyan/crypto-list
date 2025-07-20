@@ -1,0 +1,88 @@
+@import "../../../utils/variables.scss";
+@import "../../../utils/mediaBreakpoints.scss";
+
+.coinDataContainer {
+  min-width: 50%;
+  max-width: max-content;
+  padding: 3% 7%;
+  border-radius: 5%;
+  margin: 0% auto;
+  text-wrap: nowrap;
+  font-size: $defaultFont-size;
+  font-weight: bold;
+  height: max-content;
+
+  p {
+    margin-bottom: 5%;
+  }
+
+  .changePercentPositive {
+    color: green;
+  }
+
+  .changePercentNegative {
+    color: red;
+  }
+
+  img {
+    float: right;
+  }
+
+  h1 {
+    margin-bottom: 10%;
+  }
+}
+
+.lightContainer {
+  background-color: white;
+}
+
+.darkContainer {
+  background-color: $dark-color2;
+  color: white;
+}
+
+@include desktop {
+  .coinDataContainer {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 7%;
+  }
+}
+
+@include laptop {
+  .coinDataContainer {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 7%;
+  }
+}
+
+@include largeDesktop {
+  .coinDataContainer {
+    p {
+      font-size: 1.15vw;
+    }
+  }
+}
+
+@include tablet {
+  .coinDataContainer {
+    max-width: 80%;
+    font-size: 3vw;
+    width: 100%;
+    margin: 0px auto;
+    margin-top: 7%;
+  }
+}
+
+@include mobile {
+  .coinDataContainer {
+    max-width: 80%;
+    font-size: 3vw;
+    width: 100%;
+    margin: 0px auto;
+  }
+}
