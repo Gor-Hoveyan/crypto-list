@@ -24,18 +24,26 @@
   flex-direction: column;
   position: absolute;
   width: 140px;
-  top: 43px;
+  top: 42px;
+  padding-top: 5px;
   .option {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 10px;
-    padding: 3px 5px;
+    padding: 3px 15px;
     font-size: 16px;
     border: none;
     font-weight: 600;
+    cursor: pointer;
   }
-  border-radius: 0 10px;
+}
+
+.lightSelect {
+  background-color: $bg-gray-color;
+}
+
+.darkSelect {
+  background-color: $dark-color1;
 }
 
 .darkLanguageChanger,

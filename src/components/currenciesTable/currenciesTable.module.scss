@@ -1,47 +1,52 @@
-@import '../../utils/variables.scss';
-@import '../../utils/mediaBreakpoints.scss';
+@import "../../utils/variables.scss";
+@import "../../utils/mediaBreakpoints.scss";
 
 @mixin th_td_styles {
-    border-bottom: 1px solid lightgray;
-    border-collapse: collapse;
-    padding: 10px;
-    @include mobile {
-        width: 20vw;
-    }
+  border-bottom: 1px solid lightgray;
+  border-collapse: collapse;
+  padding: 10px;
+  @include mobile {
+    width: 20vw;
+  }
 }
 
 @mixin table {
-    margin: 0 auto 2% auto;
-    width: 90%;
-    border-collapse: collapse;
-    text-align: left;
-    border-top-left-radius: 0.8%;
-    border-top-right-radius: 0.8%;
-    @include mobile {
-        width: 100%;
-        margin: 0 auto;
-        td, th {
-            margin: 0;
-        }
-        th {
-            font-size: 1rem;
-        }
+  margin: 0 auto 2% auto;
+  width: 90%;
+  border-collapse: collapse;
+  text-align: left;
+  border-top-left-radius: 0.8%;
+  border-top-right-radius: 0.8%;
+  @include mobile {
+    width: 100%;
+    margin: 0 auto;
+    td,
+    th {
+      margin: 0;
     }
-    header {
-        position: sticky;
+    th {
+      font-size: 1rem;
     }
-    @include tablet {
-        width: 100%;
-    }
+  }
+  header {
+    position: sticky;
+  }
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.main {
+  height: 100vh;
 }
 
 .lightTable {
-    @include table;
-    background-color: white;
+  @include table;
+  background-color: white;
 }
 
 .darkTable {
-    @include table;
-    background-color: $dark-color1;
-    color: white;
+  @include table;
+  background-color: $dark-color1;
+  color: white;
 }

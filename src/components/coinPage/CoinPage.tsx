@@ -17,6 +17,7 @@ import {
 import PriceChart from "./priceChart/PriceChart";
 import { fetchChartsData } from "../../redux/reducers/currentCoinSlice";
 import { useTranslation } from "react-i18next";
+import Loading from "../loading/Loading";
 
 function CoinPage() {
   const coinData: CoinData = useAppSelector(
@@ -178,9 +179,10 @@ function CoinPage() {
             </div>
             <PriceChart />
           </div>
+          <Loading />
         </div>
       ) : (
-        "Loading..."
+        <Loading />
       )}
     </>
   );

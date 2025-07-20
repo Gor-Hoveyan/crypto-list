@@ -19,7 +19,7 @@ function Footer() {
       <p className={style.footerParagraph}>
         {t("footer.usedAPI")} :{" "}
         <a href="https://docs.coincap.io/" target="_blank" rel="noreferrer">
-          CoinCap API 2.0
+          CoinCap API 3.0
         </a>
       </p>
     </footer>
