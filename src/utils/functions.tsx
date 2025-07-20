@@ -66,4 +66,12 @@ function slicePercent(percent: string): string {
   return percent.slice(0, 4);
 }
 
-export { slicePrice, numberWithCommas, slicePercent };
+function getChartPrice(price: string) {
+  if (price.split(".")[0].length >= 5) {
+    return Number(price.split(".")[0]);
+  } else {
+    return Number(price.slice(0, 5));
+  }
+}
+
+export { slicePrice, numberWithCommas, slicePercent, getChartPrice };

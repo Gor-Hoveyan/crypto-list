@@ -14,6 +14,7 @@ import {
 import { useAppSelector } from "../../../redux/hooks";
 import { ChartData } from "../../../utils/schema";
 import { useTranslation } from "react-i18next";
+import { getChartPrice } from "../../../utils/functions";
 
 ChartJS.register(
   CategoryScale,
@@ -45,7 +46,7 @@ function PriceChart() {
               {
                 label: t("priceChart.label"),
                 data: chartsData.map((chartData) =>
-                  Number(chartData.priceUsd.split(".")[0])
+                  getChartPrice(chartData.priceUsd)
                 ),
                 borderWidth: 1,
                 borderColor: "#3C7FF9",
