@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./pagination.module.scss";
 import { useAppSelector } from "../../redux/hooks";
-import { useTranslation } from "react-i18next";
+import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
 type GetDataType = (
   time: string,
@@ -22,7 +22,6 @@ const CurrenciesTablePagination: React.FC<ComponentProps> = ({ getData }) => {
   const currentPage: number = useAppSelector(
     (state) => state.currenciesSlice.currentPage
   );
-  const { t } = useTranslation();
 
   return (
     <div
@@ -36,12 +35,12 @@ const CurrenciesTablePagination: React.FC<ComponentProps> = ({ getData }) => {
         className={style.paginationButton}
         onClick={() => getData("back")}
       >
-        {t("pagination.back")}
+        <MdArrowBackIos size={16} />
       </button>
       <p onClick={() => getData("first")} className={style.pageNumber}>
         1
       </p>
-      <p className={style.ellipses}> ... </p>
+      {currentPage > 4 ? <p className={style.ellipses}> - </p> : <></>}
       {paginationNumbers
         ? paginationNumbers.map((number, index) => {
             if (currentPage === number) {
@@ -51,7 +50,7 @@ const CurrenciesTablePagination: React.FC<ComponentProps> = ({ getData }) => {
                   key={index}
                   onClick={() => getData("paginationNumber", number)}
                 >
-                  <b>{number}</b>
+                  <span className={style.active}>{number}</span>
                 </p>
               );
             } else {
@@ -71,7 +70,7 @@ const CurrenciesTablePagination: React.FC<ComponentProps> = ({ getData }) => {
         className={style.paginationButton}
         onClick={() => getData("next")}
       >
-        {t("pagination.next")}
+        <MdArrowForwardIos size={16} />
       </button>
     </div>
   );

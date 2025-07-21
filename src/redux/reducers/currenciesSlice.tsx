@@ -52,7 +52,7 @@ const currenciesSlice = createSlice({
     setPaginationNumbers: (state) => {
       let arr: number[] = [];
       let offset: number = state.currentPage;
-      for (let i = 1; i <= 4; i++) {
+      for (let i = 1; i <= 3; i++) {
         if (offset > 0 && offset - i > 0) {
           arr.push(offset - i);
         } else {

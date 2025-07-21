@@ -54,10 +54,6 @@ const resources = {
         copyright: `${new Date().getFullYear()} © Currency List | All rights reserved`,
         usedAPI: "Used API",
       },
-      pagination: {
-        back: "Back",
-        next: "Next",
-      },
       languageChanger: {
         en: "English",
         ru: "Русский",
@@ -116,10 +112,6 @@ const resources = {
       footer: {
         copyright: `${new Date().getFullYear()} © Currency List | Все права защищены`,
         usedAPI: "Используемый API",
-      },
-      pagination: {
-        back: "Назад",
-        next: "Вперёд",
       },
       languageChanger: {
         en: "English",
